@@ -1,3 +1,9 @@
+import json
+from banco import carregar_alunos
+from banco import salvar_alunos
+
+alunos= carregar_alunos()
+
 def exibir_menu():
     print("----------- Sistema de Cadastro de Alunos -----------")
     print("1 - Cadastrar aluno")
@@ -21,7 +27,7 @@ def main():
             listar_aluno()
         elif escolha == "3":
             print("Iniciando a busca por nome\n")
-            buscar_aluno()
+            buscar_alunos()
         elif escolha == "4":
             print("Atualização ainda não implementada.")
         elif escolha == "5":
@@ -32,40 +38,43 @@ def main():
         else:
             print("Opção inválida, tente novamente.")
 
-if __name__ == "__main__":
-    main()    
 
-alunos=[]
 def cadastro():
     
-    matricula= int(input("Digite o número da matrícula: ")),
-    nome= str(input("Digite o nome do aluno: ")),
-    idade= int(input("Digite a idade do aluno: ")),
-    curso= str(input("Digite o curso do aluno: ")),
+    matricula= int(input("Digite o número da matrícula: "))
+    nome= str(input("Digite o nome do aluno: "))
+    idade= int(input("Digite a idade do aluno: "))
+    curso= str(input("Digite o curso do aluno: "))
     alunos.append({'Matrícula':matricula, 'Nome':nome, 'Idade': idade, 'Curso':curso})
     print('Aluno cadastrado com sucesso!')
+    salvar_alunos(alunos)
 
 
-
-if __name__ == "__main__":
-    main()    
 
 def listar_aluno():
     if not alunos:
         print("Nenhum aluno foi cadastrado.")
     else:
         for i,aluno in enumerate(alunos, start=1):
-            print(f'{i}. Matrícula: {alunos['matricula']}, Nome: {alunos['nome']}, Idade: {alunos['idade']}, Curso: {alunos['curso']}')
+            print(f'{i}. Matrícula: {aluno['Matrícula']}, Nome: {aluno['Nome']}, Idade: {aluno['Idade']}, Curso: {aluno['Curso']}')
         print()    
 
-def buscar_aluno():
-    busca_aluno=str(input("Digite o nome do aluno a ser procurado: "))
+def buscar_alunos():
+    busca_aluno = input("Digite o nome do aluno a ser procurado: ")
     
-    encontrado=False
-    if not busca_aluno in alunos:
+    encontrado = False 
+    
+    for aluno in alunos: 
+        if aluno['Nome'].lower() == busca_aluno.lower():
+            print(f"Aluno encontrado: Matrícula: {aluno['Matrícula']}, Nome: {aluno['Nome']}, Idade: {aluno['Idade']}, Curso: {aluno['Curso']}")
+            encontrado = True  
+            break  
+    
+    if not encontrado:  
         print("Aluno não encontrado, é necessário fazer o cadastro.")
-    for aluno in alunos:
-        if aluno.lower() == busca_aluno():
-            print(f'Aluno encontrado: Matrícula: {alunos["matricula"]}, Nome: {alunos["nome"]}, Idade: {alunos["idade"]}, Curso: {alunos["curso"]}')
-            break
 
+
+            
+
+if __name__ == "__main__":
+    main()    
