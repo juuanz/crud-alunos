@@ -49,6 +49,5 @@ Tecnologias usadas:
 5. Siga as instruções de acordo com o menu criado
 
 
-JUAN TAVEIRA - ESTUDANTE ENGHENHEIRO DE SOFTWARE
-GITHUB - https://github.com/juuanz
+JUAN TAVEIRA - ESTUDANTE ENGHENHEIRO DE SOFTWARE - https://github.com/juuanz
 
