@@ -29,9 +29,11 @@ def main():
             print("Iniciando a busca por nome\n")
             buscar_alunos()
         elif escolha == "4":
-            print("Atualização ainda não implementada.")
+            print("Vamos atualizar os dados.")
+            atualizar_aluno()
         elif escolha == "5":
-            print("Remoção ainda não implementada.")
+            print("Ok, iniciando remoção de aluno.")
+            deletar_aluno()
         elif escolha == "6":
             print("Saindo do sistema...")
             break
@@ -74,7 +76,55 @@ def buscar_alunos():
         print("Aluno não encontrado, é necessário fazer o cadastro.")
 
 
+def atualizar_aluno():
+    busca_nome=str(input("Digite o nome do aluno que desejar atualizar dados: "))
+
+    encontrado= False
+
+    for aluno in alunos:
+        if aluno['Nome'].lower() == busca_nome.lower():
+            print('Aluno encontrado, vamos para as atualizações. ')
+            encontrado =True
+
+        novo_nome=str(input("Digite o novo nome: (Enter se não for necessário atualizar) "))
+        if novo_nome.strip() != "":
+            aluno['Nome']= novo_nome
+
+        nova_idade=(input("Digite a nova idade: (Enter se não for necessário atualizar)"))
+        if nova_idade.strip() != "":
+            aluno['Idade']= int(nova_idade)
+
+        novo_curso=str(input("Digite o nome do novo curso: (Enter se não for necessário atualizar)"))
+        if novo_curso.strip() != "":
+            aluno['Curso']= novo_curso
+
+        salvar_alunos(alunos)
+
+        print('Dados do aluno atuaizado com sucesso.')
+
+        break
+    if not encontrado:
+        print("Aluno não encontrado, é preciso fazer o cadastro.")
+
+
+
+def deletar_aluno():
+    busca_delete=(input("Digite o nome do aluno que deseja deletar: "))
+
+    encontrado= False
+
+    for aluno in alunos:
+        if aluno['Nome'].lower() == busca_delete.lower():
+            encontrado = True
+
+            alunos.remove(aluno)
+            salvar_alunos(alunos)
             
+            print("O aluno esolhido já foi removido.")
+            break        
+    if not encontrado:
+        print("Aluno não en contrado, é necessário fazer o cadastro.")
+
 
 if __name__ == "__main__":
     main()    
