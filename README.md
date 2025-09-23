@@ -2,10 +2,10 @@
 
 # Apresentação
 
-Esse projeto é um sistema de de **Cadastro, Listagem, Busca, Atualização e Remoção de alunos**.
+Esse projeto é um sistema de **Cadastro, Listagem, Busca, Atualização e Remoção de alunos**.
 Com dados persistidos em arquivo JSON, mantendo as informações mesmo após o fechamento do programa.
 
-Obejtivos do projeto:
+Objetivos do projeto:
 
 -Estruturas de dados (listas e dicionários)
 -Aplicação de arquivos JSON
@@ -26,15 +26,15 @@ Ações do programa:
     Achar dados pelo nome do aluno.
 
 -Atulizar Aluno:
-    Permite atulizar dados de um aluno já cadastrado.
+    Permite atualizar dados de um aluno já cadastrado.
 
 -Remover Aluno:
     Ação de remoção de um aluno da lista.
 
-Tecnologias usadas:
-    Python 
-    Arquivos JSON
-    Estrutura modular, arquivos 'main.py' , 'banco.py'
++ Tecnologias usadas:
++ - Python 
++ - Arquivos JSON
++ - Estrutura modular, arquivos 'main.py' , 'banco.py'
 
 
 ---
