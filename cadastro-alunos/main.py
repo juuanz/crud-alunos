@@ -47,7 +47,7 @@ def cadastro():
     nome= str(input("Digite o nome do aluno: "))
     idade= int(input("Digite a idade do aluno: "))
     curso= str(input("Digite o curso do aluno: "))
-    alunos.append({'Matrícula':matricula, 'Nome':nome, 'Idade': idade, 'Curso':curso})
+    alunos.append({'Matricula':matricula, 'Nome':nome, 'Idade': idade, 'Curso':curso})
     print('Aluno cadastrado com sucesso!')
     salvar_alunos(alunos)
 
@@ -58,7 +58,7 @@ def listar_aluno():
         print("Nenhum aluno foi cadastrado.")
     else:
         for i,aluno in enumerate(alunos, start=1):
-            print(f'{i}. Matrícula: {aluno['Matrícula']}, Nome: {aluno['Nome']}, Idade: {aluno['Idade']}, Curso: {aluno['Curso']}')
+            print(f'{i}. Matricula: {aluno['Matricula']}, Nome: {aluno['Nome']}, Idade: {aluno['Idade']}, Curso: {aluno['Curso']}')
         print()    
 
 def buscar_alunos():
@@ -68,7 +68,7 @@ def buscar_alunos():
     
     for aluno in alunos: 
         if aluno['Nome'].lower() == busca_aluno.lower():
-            print(f"Aluno encontrado: Matrícula: {aluno['Matrícula']}, Nome: {aluno['Nome']}, Idade: {aluno['Idade']}, Curso: {aluno['Curso']}")
+            print(f"Aluno encontrado: Matricula: {aluno['Matricula']}, Nome: {aluno['Nome']}, Idade: {aluno['Idade']}, Curso: {aluno['Curso']}")
             encontrado = True  
             break  
     
