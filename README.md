@@ -31,10 +31,10 @@ Ações do programa:
 -Remover Aluno:
     Ação de remoção de um aluno da lista.
 
-+ Tecnologias usadas:
-+ - Python 
-+ - Arquivos JSON
-+ - Estrutura modular, arquivos 'main.py' , 'banco.py'
+Tecnologias usadas:
+ - Python 
+ - Arquivos JSON
+ - Estrutura modular, arquivos 'main.py' , 'banco.py'
 
 
 ---
@@ -48,7 +48,9 @@ Ações do programa:
 4. Execute o programa 'main.py': python main.py
 5. Siga as instruções de acordo com o menu criado
 
+
 # POSSÍVEIS EVOLUÇÕES 
+
 - Integração com banco de dados (MySQL / SQLite)
 - Implementação de API REST
 - Interface gráfica ou web
