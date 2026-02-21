@@ -1,6 +1,6 @@
 # CRUD Alunos - Python
 
-# Apresentação
+# README
 
 Esse projeto é um sistema de **Cadastro, Listagem, Busca, Atualização e Remoção de alunos**.
 Com dados persistidos em arquivo JSON, mantendo as informações mesmo após o fechamento do programa.
@@ -43,10 +43,17 @@ Ações do programa:
 # COMO EXECUTAR
 
 1. É necessário ter o python 3 instalado na máquina.
-2. Clone o repositório
-3. Entre na pasta do projeto
-4. Execute o programa 'main.py'
+2. Clone o repositório : git clone https://github.com/juuanz/crud-alunos
+3. Entre na pasta do projeto : cd crud-alunos
+4. Execute o programa 'main.py': python main.py
 5. Siga as instruções de acordo com o menu criado
+
+# POSSÍVEIS EVOLUÇÕES 
+- Integração com banco de dados (MySQL / SQLite)
+- Implementação de API REST
+- Interface gráfica ou web
+- Validações avançadas
+
 
 
 JUAN TAVEIRA - ESTUDANTE ENGENHEIRO DE SOFTWARE - https://github.com/juuanz
